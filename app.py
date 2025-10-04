@@ -19,7 +19,7 @@ JOBS = [
   'id ': 3,
   'title': 'Backend Engineer ',
   'location': 'NDDC office',
-  'salary': '$100,000',
+  'salary': '',
 },
 {
   'id ': 4,
