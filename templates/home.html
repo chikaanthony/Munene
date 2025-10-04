@@ -1,50 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <title>Munene</title>
+     <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+       </head>
+     <title>Munaene</title>
      <style>
-        h1{
-           font-size: 40px;
-           font-family: Roboto;
-           font-weight: normal;
-           color: rgb(50, 50, 50);
-           text-align: center;
+        #bible{
+           height: 360px;
+           width: 100%;
+           object-fit: cover;
         }
-
-       #bible{
-          width: 100%;
-          height: 360px;
-          object-fit: cover;
-       }
-
-      h2{
-         font-family: Roboto;
-         font-size:32px;
-         color: rgb(100, 100, 100);
-         text-align: center;
-      }
-
-      p{
-         color: rgb(80, 80, 80);
-         font-family: Roboto;
-      }
-      #container{
-         max-width: 520px;
-         margin:0 auto 0 auto ;
-      }
 
      </style>
   </head>
   <body>
-     <div id ="container">
-     <H1>munene</H1>
-     <img src = "{{ url_for ('static', filename = 'bible.jpg')}}" height="320" id="bible">
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
- <h2>open jobs</h2>
-     <P>todo show jobs here</P>
+     <div id ="container" class="container">
+     <H1 class="text-center mt-2 mb-4">Munaene</H1>
+     <img src = "{{ url_for ('static', filename = 'Car.jpg')}}" height="320" id="bible"  class="img-fluid" >
+        <h2 class="text-center mt-2 mb-4">About Munaene</h2>
+     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ <h2 class="text-center mt-2 mb-4">open jobs</h2>
+     <div>
+        {% for job in jobs%}
+        {% include 'jobitems.html' %}
+         {% endfor %}
+     </div>
         <div style="text-align: center;">
-     <button>Contact Us</button>
-     <p id="footer">Copyright 2025, Munene</p></div>
+     <button class="btn btn-success">Contact Us</button>
+     <p id="footer" class="mt-5">Copyright 2025, Munaene</p></div>
         </div>
   </body>
 </html>
