@@ -11,17 +11,25 @@
            height: 360px;
            width: 100%;
            object-fit: cover;
-        }
+           border-radius: 8px;
+       }
 
      </style>
   </head>
   <body>
      {% include 'nav.html' %}
      <div id ="container" class="container">
-     <H1 class="text-center mt-2 mb-4">Munaene</H1>
+     <H1 class="text-center mt-2 mb-4">Muna-ene</H1>
      <img src = "{{ url_for ('static', filename = 'Car.jpg')}}" height="320" id="bible"  class="img-fluid" >
-        <h2 class="text-center mt-2 mb-4">About Munaene</h2>
-     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 class="text-center mt-2 mb-4">About Muna-ene</h2>
+        <div class="row">
+           <div class="col-md-7">
+     <p class="lead">Muna-ene is dedicated to connecting job seekers with exciting opportunities and helping organizations find the perfect talent. Our platform streamlines the hiring process by clearly presenting open roles—from Data Analysts to Backend Engineers and everything in between—with key details like location and salary. We aim to be the most trusted and efficient bridge between your professional aspirations and the next great challenge, fostering a vibrant community where careers thrive and businesses succeed.</p>
+       </div>
+           <div class = "d-none d-md-block col-md-5">
+              <img src = "/static/people.jpg" style="height: 320px; border-radius:4px; object-fit: cover;" class="img-fluid">
+           </div>
+        </div>
  <h2 class="text-center mt-2 mb-4">open jobs</h2>
      <div>
         {% for job in jobs%}
@@ -30,7 +38,8 @@
      </div>
         <div style="text-align: center;">
      <button class="btn btn-success">Contact Us</button>
-     <p id="footer" class="mt-5">Copyright 2025, Munaene</p></div>
+     <p id="footer" class="mt-5">Copyright 2025, Muna-ene</p></div>
         </div>
+     {% include 'footer.html' %}
   </body>
 </html>
